@@ -1,5 +1,4 @@
 .home {
-
   .intro {
     padding: 90px 0 10px;
     border-bottom: 2px dashed @navigation-border;
@@ -20,8 +19,6 @@
     flex-wrap: wrap;
     justify-content: space-between;
 
-   
-    
     .text-content {
       width: 48%;
       padding-right: 1%;
@@ -92,6 +89,17 @@
     border-top: 2px dashed @navigation-border;
     display: flex;
     justify-content: space-between;
+    flex-direction: column;
+
+    h2 {
+      width: 100%;
+      text-align: center;
+    }
+
+    .destinations {
+      display: flex;
+      justify-content: space-between;
+    }
 
     @media @mobile {
       flex-wrap: wrap;
@@ -105,10 +113,110 @@
         width: 80%;
         margin: 0 auto 30px;
       }
-      
+
       .btn {
-        .button-creator(200px, 45px, @button-bg, @white, 1.8rem);     
+        .button-creator(200px, 45px, @button-bg, @white, 1.8rem);
       }
     }
   }
-}// home
+
+  .form {
+    padding: 5% 0;
+    border-top: 1px solid black;
+    h2 {
+      width: 100%;
+      text-align: center;
+      font-size: 3rem;
+      color: black;
+      margin-bottom: 5%;
+    }
+
+    .inputs {
+      .flex-it(space-between);
+      @media @mobile {
+        flex-direction: column;
+      }
+
+      .input-1,
+      .input-2 {
+        width: 40%;
+        @media @mobile {
+          width: 100%;
+          .flex-it();
+          flex-direction: column;
+        }
+
+        input {
+          width: 100%;
+          font-size: 2rem;
+          border-radius: 5px;
+          padding: 10px 0;
+          margin-top: 20px;
+          padding-left: 10px;
+          &:focus {
+            outline: none;
+          }
+
+          @media @mobile {
+            width: 90%;
+            margin-bottom: 3%;
+          }
+
+          &::-webkit-input-placeholder {
+            opacity: 0.5;
+          }
+        }
+        label {
+          font-size: 2rem;
+          text-align: center;
+        }
+      }
+    }
+
+    .text-area {
+      margin-top: 3%;
+      width: 100%;
+      .flex-it();
+      flex-direction: column;
+
+      h2 {
+        font-size: 2rem;
+        width: 100%;
+        text-align: center;
+        margin-bottom: 2%;
+      }
+
+      textarea {
+        width: 50%;
+        outline: none;
+        font-size: 1.6rem;
+        border-radius: 10px;
+        padding: 10px;
+
+        @media @mobile {
+          width: 80%;
+        }
+
+        &::placeholder {
+          opacity: 0.4;
+          font-size: 1.6rem;
+        }
+      }
+    }
+    .btn {
+      .button-creator(200px, 45px, @button-bg, @white, 1.8rem);
+      margin-top: 5%;
+      width: 50%;
+      margin: 5% auto 0;
+
+      &:hover {
+        color: black;
+        background-color: darken(white, 15%);
+      }
+
+      @media @mobile {
+        width: 80%;
+      }
+    }
+  }
+} // home

@@ -4,10 +4,16 @@
   align-items: center;
 }
 
+.flex-it(@just: center, @align: center) {
+  display: flex;
+  justify-content: @just;
+  align-items: @align;
+}
+
 .border-radius(@radius) {
   -webkit-border-radius: @radius;
-     -moz-border-radius: @radius;
-          border-radius: @radius;
+  -moz-border-radius: @radius;
+  border-radius: @radius;
 }
 
 .button-creator(@width, @height, @bg-color, @font-color, @font-size) {
@@ -24,7 +30,7 @@
   @media @mobile {
     width: 100%;
   }
-  
+
   &:hover {
     background: @white;
     color: @button-bg;
