@@ -93,4 +93,4 @@ window.addEventListener("scroll", e => {
 
 document
   .querySelectorAll("nav a")
-  .forEach(aTag => aTag.addEventListener(e => e.preventDefault()));
+  .forEach(aTag => aTag.addEventListener("click", e => e.preventDefault()));
