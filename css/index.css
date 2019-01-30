@@ -310,6 +310,15 @@ img {
   border-top: 2px dashed #C0C0C0;
   display: flex;
   justify-content: space-between;
+  flex-direction: column;
+}
+.home .content-pick h2 {
+  width: 100%;
+  text-align: center;
+}
+.home .content-pick .destinations {
+  display: flex;
+  justify-content: space-between;
 }
 @media (max-width: 500px) {
   .home .content-pick {
@@ -349,4 +358,134 @@ img {
 .home .content-pick .destination .btn:hover {
   background: #FFFFFF;
   color: #17A2B8;
+}
+.home .form {
+  padding: 5% 0;
+  border-top: 1px solid black;
+}
+.home .form h2 {
+  width: 100%;
+  text-align: center;
+  font-size: 3rem;
+  color: black;
+  margin-bottom: 5%;
+}
+.home .form .inputs {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@media (max-width: 500px) {
+  .home .form .inputs {
+    flex-direction: column;
+  }
+}
+.home .form .inputs .input-1,
+.home .form .inputs .input-2 {
+  width: 40%;
+}
+@media (max-width: 500px) {
+  .home .form .inputs .input-1,
+  .home .form .inputs .input-2 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+}
+.home .form .inputs .input-1 input,
+.home .form .inputs .input-2 input {
+  width: 100%;
+  font-size: 2rem;
+  border-radius: 5px;
+  padding: 10px 0;
+  margin-top: 20px;
+  padding-left: 10px;
+}
+.home .form .inputs .input-1 input:focus,
+.home .form .inputs .input-2 input:focus {
+  outline: none;
+}
+@media (max-width: 500px) {
+  .home .form .inputs .input-1 input,
+  .home .form .inputs .input-2 input {
+    width: 90%;
+    margin-bottom: 3%;
+  }
+}
+.home .form .inputs .input-1 input::-webkit-input-placeholder,
+.home .form .inputs .input-2 input::-webkit-input-placeholder {
+  opacity: 0.5;
+}
+.home .form .inputs .input-1 label,
+.home .form .inputs .input-2 label {
+  font-size: 2rem;
+  text-align: center;
+}
+.home .form .text-area {
+  margin-top: 3%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.home .form .text-area h2 {
+  font-size: 2rem;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 2%;
+}
+.home .form .text-area textarea {
+  width: 50%;
+  outline: none;
+  font-size: 1.6rem;
+  border-radius: 10px;
+  padding: 10px;
+}
+@media (max-width: 500px) {
+  .home .form .text-area textarea {
+    width: 80%;
+  }
+}
+.home .form .text-area textarea::placeholder {
+  opacity: 0.4;
+  font-size: 1.6rem;
+}
+.home .form .btn {
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  height: 45px;
+  background-color: #17A2B8;
+  color: #FFFFFF;
+  border: 1px solid #C0C0C0;
+  cursor: pointer;
+  font-size: 1.8rem;
+  margin-top: 5%;
+  width: 50%;
+  margin: 5% auto 0;
+}
+@media (max-width: 500px) {
+  .home .form .btn {
+    width: 100%;
+  }
+}
+.home .form .btn:hover {
+  background: #FFFFFF;
+  color: #17A2B8;
+}
+.home .form .btn:hover {
+  color: black;
+  background-color: #d9d9d9;
+}
+@media (max-width: 500px) {
+  .home .form .btn {
+    width: 80%;
+  }
 }
